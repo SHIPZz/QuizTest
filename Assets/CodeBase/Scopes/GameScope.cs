@@ -25,7 +25,7 @@ namespace CodeBase.Scopes
             BindLevelService(builder);
             BindGridConfigurator(builder);
             BindGameInit(builder);
-            BindAnswerGenerator(builder);
+            BindAnswerService(builder);
             BindLevelLoader(builder);
             BindCardAnswerHandler(builder);
             BindLocationProvider(builder);
@@ -66,7 +66,7 @@ namespace CodeBase.Scopes
             builder.Register<LevelLoader>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
         }
 
-        private void BindAnswerGenerator(IContainerBuilder builder)
+        private void BindAnswerService(IContainerBuilder builder)
         {
             builder.Register<AnswerService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
         }
